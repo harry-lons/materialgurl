@@ -24,12 +24,7 @@ export function ProductDetail() {
   const recyclableMaterials = product.materials.filter((m) => m.recyclable)
   const totalRecyclablePercentage = recyclableMaterials.reduce((sum, m) => sum + m.percentage, 0)
   
-  // Calculate total market value
-  const totalMarketValue = product.materials.reduce((sum, m) => {
-    const value = parseFloat(m.valuePerDevice?.replace('$', '') || '0')
-    return sum + value
-  }, 0)
-  
+  // Calculate recoverable market value (only recyclable materials)
   const recyclableValue = recyclableMaterials.reduce((sum, m) => {
     const value = parseFloat(m.valuePerDevice?.replace('$', '') || '0')
     return sum + value
