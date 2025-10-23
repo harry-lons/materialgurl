@@ -1,133 +1,69 @@
 [
   {
     "id": "smartphone",
-    "name": "iPhone",
+    "name": "Smartphone",
     "category": "Mobile Devices",
     "description": "Modern smartphones contain a complex mix of materials, including rare earth elements and precious metals.",
     "materials": [
       {
-        "name": "Motherboard",
-        "percentageComposition": {
-          "Gold": 1,
-          "Silver": 2,
-          "Platinum": 0.5,
-          "Palladium": 0.5,
-          "Copper": 55,
-          "Tin": 10,
-          "Lead": 5,
-          "Nickel": 15,
-          "Zinc": 11
-        }
+        "name": "Glass (Screen & Body)",
+        "percentage": 25,
+        "recyclable": true,
+        "description": "Gorilla Glass or similar strengthened glass",
+        "valuePerDevice": "$0.15"
       },
       {
-        "name": "Memory",
-        "percentageComposition": {
-          "Gold": 1,
-          "Silver": 2,
-          "Palladium": 1,
-          "Platinum": 1,
-          "Tantalum": 10,
-          "Tungsten": 8,
-          "Neodymium": 15,
-          "Dysprosium": 7,
-          "Lanthanum": 55
-        }
+        "name": "Aluminum & Steel",
+        "percentage": 20,
+        "recyclable": true,
+        "description": "Chassis, frame, and internal structure",
+        "valuePerDevice": "$0.45"
       },
       {
-        "name": "OLED Display",
-        "percentageComposition": {
-          "Indium": 5,
-          "Iridium": 1,
-          "Platinum": 1,
-          "Gallium": 3,
-          "Tin Oxide": 10,
-          "Silicon": 30,
-          "Aluminum": 10,
-          "Glass": 40
-        }
+        "name": "Lithium-ion Battery",
+        "percentage": 15,
+        "recyclable": true,
+        "description": "Contains lithium, cobalt, and other valuable materials",
+        "valuePerDevice": "$1.80"
       },
       {
-        "name": "Camera",
-        "percentageComposition": {
-          "Neodymium": 10,
-          "Lanthanum": 25,
-          "Yttrium": 5,
-          "Europium": 2,
-          "Dysprosium": 5,
-          "Cerium": 8,
-          "Gold": 5,
-          "Glass": 40
-        }
+        "name": "Copper Wiring",
+        "percentage": 10,
+        "recyclable": true,
+        "description": "Circuit connections and cables",
+        "valuePerDevice": "$0.85"
       },
       {
-        "name": "Battery",
-        "percentageComposition": {
-          "Lithium": 7,
-          "Cobalt": 25,
-          "Nickel": 15,
-          "Manganese": 10,
-          "Aluminum": 10,
-          "Graphite": 25,
-          "Copper": 8
-        }
+        "name": "Plastic Components",
+        "percentage": 15,
+        "recyclable": false,
+        "description": "Various polymer types in buttons, covers, and internal parts",
+        "valuePerDevice": "$0.05"
       },
       {
-        "name": "Speaker",
-        "percentageComposition": {
-          "Neodymium": 20,
-          "Praseodymium": 5,
-          "Dysprosium": 5,
-          "Terbium": 3,
-          "Copper": 30,
-          "Iron": 25,
-          "Plastic Polymers": 12
-        }
+        "name": "Rare Earth Elements",
+        "percentage": 5,
+        "recyclable": true,
+        "description": "Neodymium, dysprosium for speakers and vibration motors",
+        "valuePerDevice": "$2.50"
       },
       {
-        "name": "Chassis",
-        "percentageComposition": {
-          "Aluminum": 70,
-          "Titanium": 10,
-          "Magnesium": 5,
-          "Glass": 10,
-          "Stainless Steel": 5
-        }
+        "name": "Gold & Precious Metals",
+        "percentage": 3,
+        "recyclable": true,
+        "description": "Used in circuit boards and connectors",
+        "valuePerDevice": "$1.25"
       },
       {
-        "name": "CPU",
-        "percentageComposition": {
-          "Gold": 1,
-          "Silver": 1,
-          "Copper": 45,
-          "Silicon": 30,
-          "Aluminum": 10,
-          "Tin": 8,
-          "Tungsten": 5
-        }
-      },
-      {
-        "name": "GPU",
-        "percentageComposition": {
-          "Silicon": 40,
-          "Copper": 30,
-          "Gold": 1,
-          "Tantalum": 5,
-          "Boron": 2,
-          "Cobalt": 22
-        }
-      },
-      {
-        "name": "Storage",
-        "percentageComposition": {
-          "Silicon": 40,
-          "Copper": 25,
-          "Aluminum": 10,
-          "Gold": 2,
-          "Titanium": 3,
-          "Palladium": 20
-        }
+        "name": "Other Materials",
+        "percentage": 7,
+        "recyclable": false,
+        "description": "Adhesives, coatings, and various other components",
+        "valuePerDevice": "$0.02"
       }
-    ]
+    ],
+    "annualWaste": "1.4 billion phones discarded annually worldwide",
+    "recyclingRate": "Less than 20% are properly recycled"
   },
   {
     "id": "laptop",
@@ -136,110 +72,285 @@
     "description": "Laptops are packed with valuable and hazardous materials that require proper recycling.",
     "materials": [
       {
-        "name": "Display",
-        "percentageComposition": {
-          "Indium": 5,
-          "Tin": 8,
-          "Silicon": 20,
-          "Aluminum": 10,
-          "Glass": 45,
-          "Gallium": 5,
-          "Silver": 7
-        }
+        "name": "Plastic Housing",
+        "percentage": 23,
+        "recyclable": false,
+        "description": "ABS and polycarbonate plastics",
+        "valuePerDevice": "$0.35"
       },
       {
-        "name": "Motherboard",
-        "percentageComposition": {
-          "Copper": 60,
-          "Gold": 1,
-          "Silver": 2,
-          "Palladium": 1,
-          "Tin": 10,
-          "Lead": 8,
-          "Nickel": 10,
-          "Tantalum": 8
-        }
+        "name": "Aluminum & Magnesium",
+        "percentage": 22,
+        "recyclable": true,
+        "description": "Chassis and heat sinks",
+        "valuePerDevice": "$3.20"
       },
       {
-        "name": "CPU",
-        "percentageComposition": {
-          "Silicon": 40,
-          "Gold": 1,
-          "Copper": 35,
-          "Aluminum": 10,
-          "Germanium": 2,
-          "Tin": 12
-        }
+        "name": "LCD Screen Materials",
+        "percentage": 18,
+        "recyclable": true,
+        "description": "Glass, liquid crystals, and backlight components",
+        "valuePerDevice": "$1.80"
       },
       {
-        "name": "RAM",
-        "percentageComposition": {
-          "Gold": 1,
-          "Silver": 2,
-          "Palladium": 1,
-          "Platinum": 1,
-          "Ruthenium": 1,
-          "Tantalum": 8,
-          "Copper": 50,
-          "Nickel": 10,
-          "Tin": 15,
-          "Aluminum": 11
-        }
+        "name": "Battery (Lithium-ion)",
+        "percentage": 12,
+        "recyclable": true,
+        "description": "Contains valuable lithium and cobalt",
+        "valuePerDevice": "$4.50"
       },
       {
-        "name": "Graphics",
-        "percentageComposition": {
-          "Silicon": 40,
-          "Copper": 30,
-          "Cobalt": 10,
-          "Tantalum": 5,
-          "Boron": 2,
-          "Gold": 1,
-          "Aluminum": 12
-        }
+        "name": "Circuit Boards",
+        "percentage": 10,
+        "recyclable": true,
+        "description": "Rich in copper, gold, and rare metals",
+        "valuePerDevice": "$8.75"
       },
       {
-        "name": "Speakers",
-        "percentageComposition": {
-          "Neodymium": 15,
-          "Iron": 30,
-          "Boron": 10,
-          "Copper": 25,
-          "Plastic": 20
-        }
+        "name": "Copper & Wiring",
+        "percentage": 8,
+        "recyclable": true,
+        "description": "High-value recyclable material",
+        "valuePerDevice": "$2.40"
       },
       {
-        "name": "Chassis",
-        "percentageComposition": {
-          "Aluminum": 60,
-          "Magnesium": 10,
-          "Carbon Fiber": 20,
-          "Plastic Composites": 10
-        }
+        "name": "Hard Drive/SSD",
+        "percentage": 5,
+        "recyclable": true,
+        "description": "Contains aluminum, steel, and precious metals",
+        "valuePerDevice": "$1.50"
       },
       {
-        "name": "Storage",
-        "percentageComposition": {
-          "Silicon": 45,
-          "Aluminum": 10,
-          "Copper": 20,
-          "Gold": 2,
-          "Cobalt": 5,
-          "Neodymium": 8,
-          "Nickel": 10
-        }
-      },
-      {
-        "name": "Network Chip",
-        "percentageComposition": {
-          "Silicon": 50,
-          "Gallium Arsenide": 10,
-          "Copper": 20,
-          "Gold": 2,
-          "Tin": 8,
-          "Tantalum": 10
-        }
+        "name": "Other Components",
+        "percentage": 2,
+        "recyclable": false,
+        "description": "Rubber, adhesives, and miscellaneous parts",
+        "valuePerDevice": "$0.10"
       }
-    ]
+    ],
+    "annualWaste": "50 million metric tons of e-waste globally includes laptops",
+    "recyclingRate": "17.4% global e-waste recycling rate"
+  },
+  {
+    "id": "tablet",
+    "name": "Tablet",
+    "category": "Mobile Devices",
+    "description": "Tablets share similar material composition to smartphones but on a larger scale.",
+    "materials": [
+      {
+        "name": "Glass Display",
+        "percentage": 30,
+        "recyclable": true,
+        "description": "Large touchscreen display",
+        "valuePerDevice": "$0.80"
+      },
+      {
+        "name": "Lithium Polymer Battery",
+        "percentage": 20,
+        "recyclable": true,
+        "description": "Larger capacity battery",
+        "valuePerDevice": "$3.50"
+      },
+      {
+        "name": "Aluminum Body",
+        "percentage": 25,
+        "recyclable": true,
+        "description": "Premium unibody construction",
+        "valuePerDevice": "$2.75"
+      },
+      {
+        "name": "Circuit Board & Chips",
+        "percentage": 12,
+        "recyclable": true,
+        "description": "Contains gold, copper, and silicon",
+        "valuePerDevice": "$4.20"
+      },
+      {
+        "name": "Plastic Components",
+        "percentage": 8,
+        "recyclable": false,
+        "description": "Internal brackets and covers",
+        "valuePerDevice": "$0.12"
+      },
+      {
+        "name": "Other Materials",
+        "percentage": 5,
+        "recyclable": false,
+        "description": "Adhesives, connectors, and speakers",
+        "valuePerDevice": "$0.08"
+      }
+    ],
+    "annualWaste": "Tablets contribute to 50M+ tons of annual e-waste",
+    "recyclingRate": "Only 15-20% recycled properly"
+  },
+  {
+    "id": "desktop",
+    "name": "Desktop Computer",
+    "category": "Computers",
+    "description": "Desktop computers are easier to disassemble and recycle, containing significant valuable materials.",
+    "materials": [
+      {
+        "name": "Steel Chassis",
+        "percentage": 35,
+        "recyclable": true,
+        "description": "Heavy steel computer case",
+        "valuePerDevice": "$4.80"
+      },
+      {
+        "name": "Circuit Boards",
+        "percentage": 18,
+        "recyclable": true,
+        "description": "Motherboard with precious metals",
+        "valuePerDevice": "$12.50"
+      },
+      {
+        "name": "Plastic Parts",
+        "percentage": 15,
+        "recyclable": false,
+        "description": "Drive bays, bezels, and fans",
+        "valuePerDevice": "$0.45"
+      },
+      {
+        "name": "Copper Wiring & Heatsinks",
+        "percentage": 12,
+        "recyclable": true,
+        "description": "High-quality copper components",
+        "valuePerDevice": "$3.60"
+      },
+      {
+        "name": "Hard Drives/Storage",
+        "percentage": 10,
+        "recyclable": true,
+        "description": "Aluminum and rare earth magnets",
+        "valuePerDevice": "$2.25"
+      },
+      {
+        "name": "Power Supply",
+        "percentage": 8,
+        "recyclable": true,
+        "description": "Transformers and capacitors",
+        "valuePerDevice": "$1.80"
+      },
+      {
+        "name": "Other Components",
+        "percentage": 2,
+        "recyclable": false,
+        "description": "Cables, screws, and miscellaneous",
+        "valuePerDevice": "$0.15"
+      }
+    ],
+    "annualWaste": "Desktop PCs make up significant portion of 50M tons e-waste",
+    "recyclingRate": "Higher recycling rate due to easier disassembly (25-30%)"
+  },
+  {
+    "id": "monitor",
+    "name": "Computer Monitor",
+    "category": "Displays",
+    "description": "Modern LCD/LED monitors contain valuable materials but also hazardous substances requiring proper disposal.",
+    "materials": [
+      {
+        "name": "Glass & LCD Panel",
+        "percentage": 40,
+        "recyclable": true,
+        "description": "Multiple glass layers with liquid crystals",
+        "valuePerDevice": "$2.40"
+      },
+      {
+        "name": "Plastic Housing",
+        "percentage": 25,
+        "recyclable": false,
+        "description": "Bezel and stand components",
+        "valuePerDevice": "$0.55"
+      },
+      {
+        "name": "Metal Frame & Stand",
+        "percentage": 15,
+        "recyclable": true,
+        "description": "Steel or aluminum support structure",
+        "valuePerDevice": "$1.95"
+      },
+      {
+        "name": "Circuit Boards",
+        "percentage": 10,
+        "recyclable": true,
+        "description": "Control electronics with precious metals",
+        "valuePerDevice": "$3.25"
+      },
+      {
+        "name": "LED Backlights",
+        "percentage": 5,
+        "recyclable": true,
+        "description": "LED strips and drivers",
+        "valuePerDevice": "$0.65"
+      },
+      {
+        "name": "Other Materials",
+        "percentage": 5,
+        "recyclable": false,
+        "description": "Cables, connectors, and films",
+        "valuePerDevice": "$0.18"
+      }
+    ],
+    "annualWaste": "Millions of monitors discarded as technology advances",
+    "recyclingRate": "22% recycling rate for display devices"
+  },
+  {
+    "id": "smartwatch",
+    "name": "Smartwatch",
+    "category": "Wearables",
+    "description": "Smartwatches pack advanced technology into tiny packages with complex material composition.",
+    "materials": [
+      {
+        "name": "Glass Display",
+        "percentage": 20,
+        "recyclable": true,
+        "description": "Sapphire or strengthened glass",
+        "valuePerDevice": "$0.35"
+      },
+      {
+        "name": "Aluminum/Steel Body",
+        "percentage": 30,
+        "recyclable": true,
+        "description": "Watch case and frame",
+        "valuePerDevice": "$0.85"
+      },
+      {
+        "name": "Lithium-ion Battery",
+        "percentage": 18,
+        "recyclable": true,
+        "description": "Small but energy-dense battery",
+        "valuePerDevice": "$0.95"
+      },
+      {
+        "name": "Circuit Board",
+        "percentage": 15,
+        "recyclable": true,
+        "description": "Miniaturized electronics",
+        "valuePerDevice": "$2.10"
+      },
+      {
+        "name": "Sensors & Components",
+        "percentage": 10,
+        "recyclable": true,
+        "description": "Heart rate, accelerometer sensors",
+        "valuePerDevice": "$1.40"
+      },
+      {
+        "name": "Plastic/Rubber Band",
+        "percentage": 5,
+        "recyclable": false,
+        "description": "Strap materials",
+        "valuePerDevice": "$0.08"
+      },
+      {
+        "name": "Other Materials",
+        "percentage": 2,
+        "recyclable": false,
+        "description": "Adhesives and gaskets",
+        "valuePerDevice": "$0.04"
+      }
+    ],
+    "annualWaste": "Rapidly growing e-waste category with short upgrade cycles",
+    "recyclingRate": "Less than 10% properly recycled"
   }
 ]
