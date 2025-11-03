@@ -1,7 +1,3 @@
-import { ProductCard } from "@/components/ProductCard"
-import electronicsData from "@/data/electronics.json"
-import { Separator } from "@/components/ui/separator"
-
 export function Home() {
   return (
     <div className="container mx-auto px-4 py-8">
@@ -33,50 +29,6 @@ export function Home() {
           </div>
         </div>
       </div>
-
-      <Separator className="my-12" />
-
-      {/* Products Section */}
-      <section>
-        <div className="mb-8">
-          <h2 className="text-3xl font-bold mb-3">Explore Electronics</h2>
-          <p className="text-muted-foreground text-lg">
-            Click on any device to learn about its material composition and recycling potential.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {electronicsData.map((product) => (
-            <ProductCard
-              key={product.id}
-              id={product.id}
-              name={product.name}
-              category={product.category}
-              description={product.description}
-              recyclingRate={product.recyclingRate}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="mt-16 bg-muted/50 rounded-xl p-8">
-        <h2 className="text-2xl font-bold mb-6 text-center">E-Waste By The Numbers</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-          <div>
-            <div className="text-4xl font-bold text-primary mb-2">50M+</div>
-            <p className="text-muted-foreground">Metric tons of e-waste generated annually</p>
-          </div>
-          <div>
-            <div className="text-4xl font-bold text-primary mb-2">17.4%</div>
-            <p className="text-muted-foreground">Global e-waste recycling rate</p>
-          </div>
-          <div>
-            <div className="text-4xl font-bold text-primary mb-2">$57B</div>
-            <p className="text-muted-foreground">Worth of recoverable materials in e-waste</p>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
