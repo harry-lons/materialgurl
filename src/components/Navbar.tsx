@@ -1,13 +1,52 @@
 import { Button } from "@/components/ui/button"
-import { Sun, Moon } from "lucide-react"
+import { Sun, Moon, Sparkles, ChevronDown } from "lucide-react"
 import { useState } from "react"
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu"
+
+type Theme = "light" | "dark" | "barbie"
 
 export function Navbar() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [theme, setTheme] = useState<Theme>("light")
+  const [isOpen, setIsOpen] = useState(false)
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode)
-    document.documentElement.classList.toggle('dark')
+  const applyTheme = (newTheme: Theme) => {
+    // Remove all theme classes
+    document.documentElement.classList.remove('dark', 'barbie')
+    
+    // Add the selected theme class (except for light which is default)
+    if (newTheme !== 'light') {
+      document.documentElement.classList.add(newTheme)
+    }
+    
+    setTheme(newTheme)
+    setIsOpen(false)
+  }
+
+  const getThemeIcon = () => {
+    switch (theme) {
+      case "dark":
+        return <Moon className="h-5 w-5" />
+      case "barbie":
+        return <Sparkles className="h-5 w-5" />
+      default:
+        return <Sun className="h-5 w-5" />
+    }
+  }
+
+  const getThemeLabel = () => {
+    switch (theme) {
+      case "dark":
+        return "Dark"
+      case "barbie":
+        return "Barbie"
+      default:
+        return "Light"
+    }
   }
 
   return (
@@ -18,14 +57,37 @@ export function Navbar() {
         </div>
         
         <div className="flex flex-1 items-center justify-end space-x-2">
-          <Button 
-            variant="ghost" 
-            size="icon"
-            onClick={toggleDarkMode}
-            aria-label="Toggle dark mode"
-          >
-            {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label="Select theme"
+                className="gap-2"
+              >
+                {getThemeIcon()}
+                <span className="hidden sm:inline">{getThemeLabel()}</span>
+                <ChevronDown className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            {isOpen && (
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => applyTheme("light")}>
+                  <Sun className="h-4 w-4 mr-2" />
+                  Light
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => applyTheme("dark")}>
+                  <Moon className="h-4 w-4 mr-2" />
+                  Dark
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => applyTheme("barbie")}>
+                  <Sparkles className="h-4 w-4 mr-2" />
+                  Barbie Pink
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            )}
+          </DropdownMenu>
         </div>
       </div>
     </nav>
