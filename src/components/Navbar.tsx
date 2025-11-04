@@ -4,7 +4,6 @@ import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu"
@@ -84,19 +83,17 @@ export function Navbar() {
           
           <div className="flex items-center space-x-2">
             <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setIsOpen(!isOpen)}
-                  aria-label="Select theme"
-                  className="gap-2"
-                >
-                  {getThemeIcon()}
-                  <span className="hidden sm:inline">{getThemeLabel()}</span>
-                  <ChevronDown className="h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label="Select theme"
+                className="gap-2"
+              >
+                {getThemeIcon()}
+                <span className="hidden sm:inline">{getThemeLabel()}</span>
+                <ChevronDown className="h-4 w-4" />
+              </Button>
               {isOpen && (
                 <DropdownMenuContent align="end">
                   <DropdownMenuItem onClick={() => applyTheme("light")}>
