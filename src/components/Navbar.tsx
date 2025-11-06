@@ -3,7 +3,6 @@ import { Sun, Moon, Sparkles, ChevronDown } from "lucide-react"
 import { useState } from "react"
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu"
@@ -58,19 +57,17 @@ export function Navbar() {
         
         <div className="flex flex-1 items-center justify-end space-x-2">
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setIsOpen(!isOpen)}
-                aria-label="Select theme"
-                className="gap-2"
-              >
-                {getThemeIcon()}
-                <span className="hidden sm:inline">{getThemeLabel()}</span>
-                <ChevronDown className="h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Select theme"
+              className="gap-2"
+            >
+              {getThemeIcon()}
+              <span className="hidden sm:inline">{getThemeLabel()}</span>
+              <ChevronDown className="h-4 w-4" />
+            </Button>
             {isOpen && (
               <DropdownMenuContent align="end">
                 <DropdownMenuItem onClick={() => applyTheme("light")}>
