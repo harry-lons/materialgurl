@@ -27,9 +27,6 @@ export function Home() {
             <p className="text-lg md:text-xl text-muted-foreground">
               Discover what's inside your electronics and learn about the materials that can be recovered through proper e-waste recycling.
             </p>
-            <div className="flex flex-wrap gap-2">
-              <span className="text-sm text-muted-foreground">Learn about:</span>
-            </div>
           </div>
         </div>
       </div>
