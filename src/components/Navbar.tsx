@@ -71,14 +71,6 @@ export function Navbar() {
                 Home
               </Button>
             </Link>
-            <Link to="/about">
-              <Button 
-                variant={isActive('/about') ? "default" : "ghost"} 
-                size="sm"
-              >
-                About
-              </Button>
-            </Link>
           </nav>
           
           <div className="flex items-center space-x-2">

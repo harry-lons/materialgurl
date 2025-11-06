@@ -62,8 +62,7 @@
         "valuePerDevice": "$0.02"
       }
     ],
-    "annualWaste": "1.4 billion phones discarded annually worldwide",
-    "recyclingRate": "Less than 20% are properly recycled"
+    "annualWaste": "1.4 billion phones discarded annually worldwide"
   },
   {
     "id": "laptop",
@@ -128,8 +127,7 @@
         "valuePerDevice": "$0.10"
       }
     ],
-    "annualWaste": "50 million metric tons of e-waste globally includes laptops",
-    "recyclingRate": "17.4% global e-waste recycling rate"
+    "annualWaste": "50 million metric tons of e-waste globally includes laptops"
   },
   {
     "id": "tablet",
@@ -180,8 +178,7 @@
         "valuePerDevice": "$0.08"
       }
     ],
-    "annualWaste": "Tablets contribute to 50M+ tons of annual e-waste",
-    "recyclingRate": "Only 15-20% recycled properly"
+    "annualWaste": "Tablets contribute to 50M+ tons of annual e-waste"
   },
   {
     "id": "desktop",
@@ -239,8 +236,7 @@
         "valuePerDevice": "$0.15"
       }
     ],
-    "annualWaste": "Desktop PCs make up significant portion of 50M tons e-waste",
-    "recyclingRate": "Higher recycling rate due to easier disassembly (25-30%)"
+    "annualWaste": "Desktop PCs make up significant portion of 50M tons e-waste"
   },
   {
     "id": "monitor",
@@ -291,8 +287,7 @@
         "valuePerDevice": "$0.18"
       }
     ],
-    "annualWaste": "Millions of monitors discarded as technology advances",
-    "recyclingRate": "22% recycling rate for display devices"
+    "annualWaste": "Millions of monitors discarded as technology advances"
   },
   {
     "id": "smartwatch",
@@ -350,7 +345,6 @@
         "valuePerDevice": "$0.04"
       }
     ],
-    "annualWaste": "Rapidly growing e-waste category with short upgrade cycles",
-    "recyclingRate": "Less than 10% properly recycled"
+    "annualWaste": "Rapidly growing e-waste category with short upgrade cycles"
   }
 ]
