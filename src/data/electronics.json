@@ -3,6 +3,7 @@
     "id": "smartphone",
     "name": "Smartphone",
     "category": "Mobile Devices",
+    "image": "/products/iphone.jpg",
     "description": "Modern smartphones contain a complex mix of materials, including rare earth elements and precious metals.",
     "materials": [
       { "name": "Gold", "percentage": 0.54, "recyclable": true, "description": "Used in connectors and microelectronics", "Value": true, "valuePerDevice": 21.46 },

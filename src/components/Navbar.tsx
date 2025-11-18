@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Sun, Moon, Sparkles, ChevronDown } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import {
   DropdownMenu,
@@ -15,7 +15,15 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
 
-  const applyTheme = (newTheme: Theme) => {
+  // Load theme from localStorage on mount
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as Theme | null
+    if (savedTheme && ['light', 'dark', 'barbie'].includes(savedTheme)) {
+      applyTheme(savedTheme, false) // false = don't save to localStorage again
+    }
+  }, [])
+
+  const applyTheme = (newTheme: Theme, saveToStorage: boolean = true) => {
     // Remove all theme classes
     document.documentElement.classList.remove('dark', 'barbie')
     
@@ -26,6 +34,11 @@ export function Navbar() {
     
     setTheme(newTheme)
     setIsOpen(false)
+    
+    // Save to localStorage
+    if (saveToStorage) {
+      localStorage.setItem('theme', newTheme)
+    }
   }
 
   const getThemeIcon = () => {
@@ -69,14 +82,6 @@ export function Navbar() {
                 size="sm"
               >
                 Home
-              </Button>
-            </Link>
-            <Link to="/about">
-              <Button 
-                variant={isActive('/about') ? "default" : "ghost"} 
-                size="sm"
-              >
-                About
               </Button>
             </Link>
           </nav>

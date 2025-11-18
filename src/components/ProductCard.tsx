@@ -9,10 +9,10 @@ interface ProductCardProps {
   name: string
   category: string
   description: string
-  recyclingRate: string
+  image?: string
 }
 
-export function ProductCard({ id, name, category, description, recyclingRate }: ProductCardProps) {
+export function ProductCard({ id, name, category, description, image }: ProductCardProps) {
   return (
     <Card className="flex flex-col h-full hover:shadow-lg transition-shadow">
       <CardHeader>
@@ -23,14 +23,12 @@ export function ProductCard({ id, name, category, description, recyclingRate }: 
         <CardDescription className="line-clamp-2">{description}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        {/* Placeholder for product image */}
-        <div className="w-full h-48 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center mb-4">
-          <span className="text-4xl opacity-50">📱</span>
-        </div>
-        <div className="space-y-2">
-          <p className="text-sm text-muted-foreground">
-            <strong>Recycling Rate:</strong> {recyclingRate}
-          </p>
+        <div className="w-full h-48 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center overflow-hidden">
+          {image ? (
+            <img src={image} alt={name} className="w-full h-full object-cover" />
+          ) : (
+            <span className="text-4xl opacity-50">📱</span>
+          )}
         </div>
       </CardContent>
       <CardFooter>
