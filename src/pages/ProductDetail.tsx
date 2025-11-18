@@ -26,9 +26,12 @@ export function ProductDetail() {
   
   // Calculate recoverable market value (only recyclable materials)
   const recyclableValue = recyclableMaterials.reduce((sum, m) => {
-    const value = parseFloat(m.valuePerDevice?.replace('$', '') || '0')
+    const value = parseFloat(String(m.valuePerDevice || '0').replace('$', ''))
     return sum + value
   }, 0)
+
+  // Sort materials by percentage in descending order
+  const sortedMaterials = [...product.materials].sort((a, b) => b.percentage - a.percentage)
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -62,55 +65,11 @@ export function ProductDetail() {
 
       <Separator className="my-8" />
 
-      {/* Key Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">Annual E-Waste</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground">{product.annualWaste}</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">Current Recycling Rate</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground">{product.recyclingRate}</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg flex items-center gap-2">
-              <Recycle className="h-5 w-5 text-green-600" />
-              Recyclable Materials
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-2xl font-bold text-green-600">{totalRecyclablePercentage}%</p>
-            <p className="text-xs text-muted-foreground mt-1">by weight</p>
-          </CardContent>
-        </Card>
-        <Card className="border-primary/50 bg-primary/5">
-          <CardHeader>
-            <CardTitle className="text-lg flex items-center gap-2">
-              <DollarSign className="h-5 w-5 text-primary" />
-              Recoverable Value
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-2xl font-bold text-primary">${recyclableValue.toFixed(2)}</p>
-            <p className="text-xs text-muted-foreground mt-1">per device recycled</p>
-          </CardContent>
-        </Card>
-      </div>
-
       {/* Material Composition */}
       <section className="mb-8">
         <h2 className="text-3xl font-bold mb-6">Material Composition</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {product.materials.map((material, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {sortedMaterials.map((material, index) => (
             <Card 
               key={index} 
               className={material.recyclable ? "border-green-500/50" : "border-orange-500/50"}
@@ -155,7 +114,7 @@ export function ProductDetail() {
         <Card>
           <CardContent className="pt-6">
             <div className="space-y-4">
-              {product.materials.map((material, index) => (
+              {sortedMaterials.map((material, index) => (
                 <div key={index}>
                   <div className="flex justify-between mb-2">
                     <span className="text-sm font-medium">{material.name}</span>
