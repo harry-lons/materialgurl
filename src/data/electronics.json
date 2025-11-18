@@ -3,6 +3,7 @@
     "id": "smartphone",
     "name": "Smartphone",
     "category": "Mobile Devices",
+    "image": "/products/iphone.jpg",
     "description": "Modern smartphones contain a complex mix of materials, including rare earth elements and precious metals.",
     "materials": [
       {
@@ -68,6 +69,7 @@
     "id": "laptop",
     "name": "Laptop Computer",
     "category": "Computers",
+    "image": "/products/laptop.png",
     "description": "Laptops are packed with valuable and hazardous materials that require proper recycling.",
     "materials": [
       {
@@ -133,6 +135,7 @@
     "id": "tablet",
     "name": "Tablet",
     "category": "Mobile Devices",
+    "image": "/products/tablet.jpg",
     "description": "Tablets share similar material composition to smartphones but on a larger scale.",
     "materials": [
       {

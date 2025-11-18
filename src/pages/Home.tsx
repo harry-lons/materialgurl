@@ -50,6 +50,7 @@ export function Home() {
               name={product.name}
               category={product.category}
               description={product.description}
+              image={product.image}
             />
           ))}
         </div>

@@ -9,9 +9,10 @@ interface ProductCardProps {
   name: string
   category: string
   description: string
+  image?: string
 }
 
-export function ProductCard({ id, name, category, description }: ProductCardProps) {
+export function ProductCard({ id, name, category, description, image }: ProductCardProps) {
   return (
     <Card className="flex flex-col h-full hover:shadow-lg transition-shadow">
       <CardHeader>
@@ -22,9 +23,12 @@ export function ProductCard({ id, name, category, description }: ProductCardProp
         <CardDescription className="line-clamp-2">{description}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        {/* Placeholder for product image */}
-        <div className="w-full h-48 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center">
-          <span className="text-4xl opacity-50">📱</span>
+        <div className="w-full h-48 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center overflow-hidden">
+          {image ? (
+            <img src={image} alt={name} className="w-full h-full object-cover" />
+          ) : (
+            <span className="text-4xl opacity-50">📱</span>
+          )}
         </div>
       </CardContent>
       <CardFooter>
