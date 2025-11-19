@@ -63,27 +63,8 @@ export function Navbar() {
     }
   }
 
-  const getThemeIcon = () => {
-    switch (theme) {
-      case "dark":
-        return <Moon className="h-5 w-5" />
-      case "barbie":
-        return <Sparkles className="h-5 w-5" />
-      default:
-        return <Sun className="h-5 w-5" />
-    }
-  }
+  const isActive = (path: string) => location.pathname === path
 
-  const getThemeLabel = () => {
-    switch (theme) {
-      case "dark":
-        return "Dark"
-      case "barbie":
-        return "Barbie"
-      default:
-        return "Light"
-    }
-  }
 
   return (
     <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
