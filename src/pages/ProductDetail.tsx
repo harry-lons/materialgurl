@@ -56,14 +56,62 @@ export function ProductDetail() {
         <p className="text-lg text-muted-foreground max-w-3xl">{product.description}</p>
       </div>
 
-      {/* Placeholder Image */}
+      {/* Product Image */}
       <div className="mb-8">
-        <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center">
-          <span className="text-8xl opacity-50">📱</span>
+        <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center overflow-hidden">
+          {product.image ? (
+            <img src={product.image} alt={product.name} className="w-full h-full object-contain" />
+          ) : (
+            <span className="text-8xl opacity-50">📱</span>
+          )}
         </div>
       </div>
 
       <Separator className="my-8" />
+
+      {/* Key Stats */}
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Annual E-Waste</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-muted-foreground">{product.annualWaste}</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Current Recycling Rate</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-muted-foreground">{product.recyclingRate}</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg flex items-center gap-2">
+              <Recycle className="h-5 w-5 text-green-600" />
+              Recyclable Materials
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-2xl font-bold text-green-600">{totalRecyclablePercentage}%</p>
+            <p className="text-xs text-muted-foreground mt-1">by weight</p>
+          </CardContent>
+        </Card>
+        <Card className="border-primary/50 bg-primary/5">
+          <CardHeader>
+            <CardTitle className="text-lg flex items-center gap-2">
+              <DollarSign className="h-5 w-5 text-primary" />
+              Recoverable Value
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-2xl font-bold text-primary">${recyclableValue.toFixed(2)}</p>
+            <p className="text-xs text-muted-foreground mt-1">per device recycled</p>
+          </CardContent>
+        </Card>
+      </div> */}
 
       {/* Material Composition */}
       <section className="mb-8">

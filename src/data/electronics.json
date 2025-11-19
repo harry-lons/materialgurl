@@ -3,7 +3,7 @@
     "id": "smartphone",
     "name": "Smartphone",
     "category": "Mobile Devices",
-    "image": "/products/iphone.jpg",
+    "image": "/products/iphone.png",
     "description": "Modern smartphones contain a complex mix of materials, including rare earth elements and precious metals.",
     "materials": [
       { "name": "Gold", "percentage": 0.54, "recyclable": true, "description": "Used in connectors and microelectronics", "Value": true, "valuePerDevice": 21.46 },
@@ -50,6 +50,7 @@
     "id": "laptop",
     "name": "Laptop",
     "category": "Computing Devices",
+    "image": "/products/laptop.png",
     "description": "Laptops include a broad range of metals and elements for circuitry, batteries, and casing.",
     "materials": [
       { "name": "Copper", "percentage": 21.40, "recyclable": true, "description": "Wiring and components", "Value": true, "valuePerDevice": 0.0739 },
@@ -81,6 +82,7 @@
     "id": "tablet",
     "name": "Tablet",
     "category": "Mobile Devices",
+    "image": "/products/tablet.jpg",
     "description": "Tablets use lightweight materials and valuable metals in displays and circuit boards.",
     "materials": [
       { "name": "Aluminum", "percentage": 22.25, "recyclable": true, "description": "Casing material", "Value": true, "valuePerDevice": 0.012 },
@@ -110,6 +112,7 @@
     "id": "desktop",
     "name": "Desktop Computer",
     "category": "Computing Devices",
+    "image": "/products/desktop.png",
     "description": "Desktops contain larger circuit boards, power units, and more metals compared to portable devices.",
     "materials": [
       { "name": "Copper", "percentage": 30.10, "recyclable": true, "description": "Wiring, coils, and PSU", "Value": true, "valuePerDevice": 0.112 },
@@ -137,6 +140,7 @@
     "id": "computer_monitor",
     "name": "Computer Monitor",
     "category": "Displays",
+    "image": "/products/monitor.png",
     "description": "Monitors are made from glass, plastics, and valuable trace metals for circuitry and LEDs.",
     "materials": [
       { "name": "Glass", "percentage": 38.50, "recyclable": true, "description": "Display panel material", "Value": false, "valuePerDevice": "NA" },
@@ -159,6 +163,7 @@
     "id": "smartwatch",
     "name": "Smartwatch",
     "category": "Wearable Devices",
+    "image": "/products/smartwatch.png",
     "description": "Smartwatches use small quantities of precious and rare metals in compact circuit boards.",
     "materials": [
       { "name": "Glass", "percentage": 33.00, "recyclable": true, "description": "Display panel material", "Value": false, "valuePerDevice": "NA" },
