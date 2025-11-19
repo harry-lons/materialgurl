@@ -1,0 +1,45 @@
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { ArrowRight } from "lucide-react"
+import { Link } from "react-router-dom"
+
+interface ProductCardProps {
+  id: string
+  name: string
+  category: string
+  description: string
+  image?: string
+}
+
+export function ProductCard({ id, name, category, description, image }: ProductCardProps) {
+  return (
+    <Card className="flex flex-col h-full hover:shadow-lg transition-shadow">
+      <CardHeader>
+        <div className="flex justify-between items-start mb-2">
+          <Badge variant="secondary">{category}</Badge>
+        </div>
+        <CardTitle className="text-xl">{name}</CardTitle>
+        <CardDescription className="line-clamp-2">{description}</CardDescription>
+      </CardHeader>
+      <CardContent className="flex-grow">
+        <div className="w-full h-48 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center overflow-hidden">
+          {image ? (
+            <img src={image} alt={name} className="w-full h-full object-cover" />
+          ) : (
+            <span className="text-4xl opacity-50">📱</span>
+          )}
+        </div>
+      </CardContent>
+      <CardFooter>
+        <Link to={`/product/${id}`} className="w-full">
+          <Button className="w-full" variant="default">
+            View Materials
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
+      </CardFooter>
+    </Card>
+  )
+}
+

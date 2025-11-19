@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Sun, Moon, Sparkles, ChevronDown } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { Link, useLocation } from "react-router-dom"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,8 +13,17 @@ type Theme = "light" | "dark" | "barbie"
 export function Navbar() {
   const [theme, setTheme] = useState<Theme>("light")
   const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
 
-  const applyTheme = (newTheme: Theme) => {
+  // Load theme from localStorage on mount
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as Theme | null
+    if (savedTheme && ['light', 'dark', 'barbie'].includes(savedTheme)) {
+      applyTheme(savedTheme, false) // false = don't save to localStorage again
+    }
+  }, [])
+
+  const applyTheme = (newTheme: Theme, saveToStorage: boolean = true) => {
     // Remove all theme classes
     document.documentElement.classList.remove('dark', 'barbie')
     
@@ -24,6 +34,33 @@ export function Navbar() {
     
     setTheme(newTheme)
     setIsOpen(false)
+    
+    // Save to localStorage
+    if (saveToStorage) {
+      localStorage.setItem('theme', newTheme)
+    }
+  }
+
+  const getThemeIcon = () => {
+    switch (theme) {
+      case "dark":
+        return <Moon className="h-5 w-5" />
+      case "barbie":
+        return <Sparkles className="h-5 w-5" />
+      default:
+        return <Sun className="h-5 w-5" />
+    }
+  }
+
+  const getThemeLabel = () => {
+    switch (theme) {
+      case "dark":
+        return "Dark"
+      case "barbie":
+        return "Barbie"
+      default:
+        return "Light"
+    }
   }
 
   const getThemeIcon = () => {
@@ -55,36 +92,49 @@ export function Navbar() {
           <span className="font-bold text-xl">MaterialGurl</span>
         </div>
         
-        <div className="flex flex-1 items-center justify-end space-x-2">
-          <DropdownMenu>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Select theme"
-              className="gap-2"
-            >
-              {getThemeIcon()}
-              <span className="hidden sm:inline">{getThemeLabel()}</span>
-              <ChevronDown className="h-4 w-4" />
-            </Button>
-            {isOpen && (
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => applyTheme("light")}>
-                  <Sun className="h-4 w-4 mr-2" />
-                  Light
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => applyTheme("dark")}>
-                  <Moon className="h-4 w-4 mr-2" />
-                  Dark
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => applyTheme("barbie")}>
-                  <Sparkles className="h-4 w-4 mr-2" />
-                  Barbie Pink
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            )}
-          </DropdownMenu>
+        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+          <nav className="flex items-center space-x-2">
+            <Link to="/">
+              <Button 
+                variant={isActive('/') ? "default" : "ghost"} 
+                size="sm"
+              >
+                Home
+              </Button>
+            </Link>
+          </nav>
+          
+          <div className="flex items-center space-x-2">
+            <DropdownMenu>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label="Select theme"
+                className="gap-2"
+              >
+                {getThemeIcon()}
+                <span className="hidden sm:inline">{getThemeLabel()}</span>
+                <ChevronDown className="h-4 w-4" />
+              </Button>
+              {isOpen && (
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem onClick={() => applyTheme("light")}>
+                    <Sun className="h-4 w-4 mr-2" />
+                    Light
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => applyTheme("dark")}>
+                    <Moon className="h-4 w-4 mr-2" />
+                    Dark
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => applyTheme("barbie")}>
+                    <Sparkles className="h-4 w-4 mr-2" />
+                    Barbie Pink
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              )}
+            </DropdownMenu>
+          </div>
         </div>
       </div>
     </nav>
