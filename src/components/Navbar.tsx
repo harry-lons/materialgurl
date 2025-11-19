@@ -63,15 +63,33 @@ export function Navbar() {
     }
   }
 
-  const isActive = (path: string) => location.pathname === path
+  const getThemeIcon = () => {
+    switch (theme) {
+      case "dark":
+        return <Moon className="h-5 w-5" />
+      case "barbie":
+        return <Sparkles className="h-5 w-5" />
+      default:
+        return <Sun className="h-5 w-5" />
+    }
+  }
+
+  const getThemeLabel = () => {
+    switch (theme) {
+      case "dark":
+        return "Dark"
+      case "barbie":
+        return "Barbie"
+      default:
+        return "Light"
+    }
+  }
 
   return (
     <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
       <div className="container flex h-16 items-center px-4">
         <div className="mr-4 flex">
-          <Link to="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold text-xl">MaterialGurl</span>
-          </Link>
+          <span className="font-bold text-xl">MaterialGurl</span>
         </div>
         
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
