@@ -3,7 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { ArrowLeft, Recycle, AlertCircle, DollarSign } from "lucide-react"
+// import { ArrowLeft, Recycle, AlertCircle, DollarSign } from "lucide-react"
+import { ArrowLeft, Recycle, AlertCircle } from "lucide-react"
 import electronicsData from "@/data/electronics.json"
 
 export function ProductDetail() {
@@ -21,14 +22,14 @@ export function ProductDetail() {
     )
   }
 
-  const recyclableMaterials = product.materials.filter((m) => m.recyclable)
-  const totalRecyclablePercentage = recyclableMaterials.reduce((sum, m) => sum + m.percentage, 0)
+  // const recyclableMaterials = product.materials.filter((m) => m.recyclable)
+  // const totalRecyclablePercentage = recyclableMaterials.reduce((sum, m) => sum + m.percentage, 0)
   
   // Calculate recoverable market value (only recyclable materials)
-  const recyclableValue = recyclableMaterials.reduce((sum, m) => {
-    const value = parseFloat(String(m.valuePerDevice || '0').replace('$', ''))
-    return sum + value
-  }, 0)
+  // const recyclableValue = recyclableMaterials.reduce((sum, m) => {
+  //   const value = parseFloat(String(m.valuePerDevice || '0').replace('$', ''))
+  //   return sum + value
+  // }, 0)
 
   // Sort materials by percentage in descending order
   const sortedMaterials = [...product.materials].sort((a, b) => b.percentage - a.percentage)
