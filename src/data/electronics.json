@@ -56,7 +56,7 @@
     "materials": [
       { "name": "Copper", "percentage": 21.40, "recyclable": true, "description": "Wiring and components", "Value": true, "valuePerDevice": 0.0739 },
       { "name": "Aluminum", "percentage": 17.75, "recyclable": true, "description": "Casing and chassis", "Value": true, "valuePerDevice": 0.0161 },
-      { "name": "Silicon", "percentage": 15.25, "recyclable": true, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.1325 },
+      { "name": "Silicon", "percentage": 15.25, "recyclable": false, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.1325 },
       { "name": "Glass", "percentage": 13.50, "recyclable": true, "description": "Display panels", "Value": false, "valuePerDevice": "NA" },
       { "name": "Tin", "percentage": 5.91, "recyclable": true, "description": "Solder material", "Value": true, "valuePerDevice": 0.0664 },
       { "name": "Carbon Fiber", "percentage": 4.00, "recyclable": true, "description": "Structural panels", "Value": false, "valuePerDevice": "NA" },
@@ -64,18 +64,18 @@
       { "name": "Tantalum", "percentage": 2.70, "recyclable": true, "description": "Capacitors", "Value": true, "valuePerDevice": 0.222 },
       { "name": "Silver", "percentage": 2.60, "recyclable": true, "description": "Contacts and wiring", "Value": true, "valuePerDevice": 1.2373 },
       { "name": "Magnesium", "percentage": 2.00, "recyclable": true, "description": "Structural frame", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Plastic Composites", "percentage": 2.00, "recyclable": true, "description": "Structural panels", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Plastic", "percentage": 2.00, "recyclable": false, "description": "Structural panels", "Value": false, "valuePerDevice": "NA" },
       { "name": "Lead", "percentage": 1.60, "recyclable": true, "description": "Solder", "Value": true, "valuePerDevice": 0.001 },
-      { "name": "Indium", "percentage": 1.50, "recyclable": true, "description": "Display material", "Value": true, "valuePerDevice": 0.1641 },
-      { "name": "Gallium", "percentage": 1.50, "recyclable": true, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.024 },
+      { "name": "Indium", "percentage": 1.50, "recyclable": false, "description": "Display material", "Value": true, "valuePerDevice": 0.1641 },
+      { "name": "Gallium", "percentage": 1.50, "recyclable": false, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.024 },
       { "name": "Cobalt", "percentage": 1.25, "recyclable": true, "description": "Battery", "Value": false, "valuePerDevice": "NA" },
       { "name": "Iron", "percentage": 0.90, "recyclable": true, "description": "Structural parts", "Value": true, "valuePerDevice": 0.00003 },
       { "name": "Gold", "percentage": 0.85, "recyclable": true, "description": "Microprocessors", "Value": true, "valuePerDevice": 33.7866 },
-      { "name": "Ruthenium", "percentage": 0.20, "recyclable": true, "description": "Specialty electronics", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Palladium", "percentage": 0.20, "recyclable": true, "description": "Contacts and wiring", "Value": true, "valuePerDevice": 2.8299 },
-      { "name": "Boron", "percentage": 0.20, "recyclable": true, "description": "Magnets", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Ruthenium", "percentage": 0.20, "recyclable": false, "description": "Specialty electronics", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Palladium", "percentage": 0.20, "recyclable": false, "description": "Contacts and wiring", "Value": true, "valuePerDevice": 2.8299 },
+      { "name": "Boron", "percentage": 0.20, "recyclable": false, "description": "Magnets", "Value": false, "valuePerDevice": "NA" },
       { "name": "Germanium", "percentage": 0.20, "recyclable": true, "description": "Semiconductors", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Other", "percentage": 1.49, "recyclable": true, "description": "Miscellaneous components", "Value": false, "valuePerDevice": "NA" }
+      { "name": "Other", "percentage": 1.49, "recyclable": false, "description": "Miscellaneous components", "Value": false, "valuePerDevice": "NA" }
   ]},
  
  
@@ -88,24 +88,24 @@
     "materials": [
       { "name": "Aluminum", "percentage": 22.25, "recyclable": true, "description": "Casing material", "Value": true, "valuePerDevice": 0.012 },
       { "name": "Glass", "percentage": 21.75, "recyclable": true, "description": "Display panel", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Silicon", "percentage": 17.05, "recyclable": true, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.147 },
+      { "name": "Silicon", "percentage": 17.05, "recyclable": false, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.147 },
       { "name": "Copper", "percentage": 11.20, "recyclable": true, "description": "Internal wiring and traces", "Value": true, "valuePerDevice": 0.038 },
-      { "name": "Graphite", "percentage": 5.00, "recyclable": true, "description": "Battery anodes", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Graphite", "percentage": 5.00, "recyclable": false, "description": "Battery anodes", "Value": false, "valuePerDevice": "NA" },
       { "name": "Cobalt", "percentage": 4.25, "recyclable": true, "description": "Battery cathodes", "Value": false, "valuePerDevice": "NA" },
       { "name": "Gold", "percentage": 2.25, "recyclable": true, "description": "Microchips", "Value": true, "valuePerDevice": 0.093 },
       { "name": "Nickel", "percentage": 2.25, "recyclable": true, "description": "Plating and batteries", "Value": true, "valuePerDevice": 0.010 },
       { "name": "Tin", "percentage": 2.00, "recyclable": true, "description": "Solder", "Value": true, "valuePerDevice": 0.020 },
-      { "name": "Neodymium", "percentage": 1.25, "recyclable": true, "description": "Magnets", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Manganese", "percentage": 1.80, "recyclable": true, "description": "Battery cathodes", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Gallium", "percentage": 1.50, "recyclable": true, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.024 },
+      { "name": "Neodymium", "percentage": 1.25, "recyclable": false, "description": "Magnets", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Manganese", "percentage": 1.80, "recyclable": false, "description": "Battery cathodes", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Gallium", "percentage": 1.50, "recyclable": false, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.024 },
       { "name": "Zinc", "percentage": 1.50, "recyclable": true, "description": "Alloys", "Value": true, "valuePerDevice": 0.001 },
-      { "name": "Lithium", "percentage": 1.08, "recyclable": true, "description": "Battery", "Value": true, "valuePerDevice": 0.271 },
+      { "name": "Lithium", "percentage": 1.08, "recyclable": false, "description": "Battery", "Value": true, "valuePerDevice": 0.271 },
       { "name": "Silver", "percentage": 1.05, "recyclable": true, "description": "Contacts and traces", "Value": true, "valuePerDevice": 0.009 },
       { "name": "Tantalum", "percentage": 1.05, "recyclable": true, "description": "Capacitors", "Value": true, "valuePerDevice": 0.086 },
-      { "name": "Graphene", "percentage": 0.75, "recyclable": true, "description": "Advanced circuitry", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Palladium", "percentage": 0.15, "recyclable": true, "description": "Electronic contacts", "Value": true, "valuePerDevice": 0.021 },
-      { "name": "Boron", "percentage": 0.50, "recyclable": true, "description": "Magnets", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Other", "percentage": 1.37, "recyclable": true, "description": "Miscellaneous components", "Value": false, "valuePerDevice": "NA" }
+      { "name": "Graphene", "percentage": 0.75, "recyclable": false, "description": "Advanced circuitry", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Palladium", "percentage": 0.15, "recyclable": false, "description": "Electronic contacts", "Value": true, "valuePerDevice": 0.021 },
+      { "name": "Boron", "percentage": 0.50, "recyclable": false, "description": "Magnets", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Other", "percentage": 1.37, "recyclable": false, "description": "Miscellaneous components", "Value": false, "valuePerDevice": "NA" }
   ]},
  
  
@@ -117,7 +117,7 @@
     "description": "Desktops contain larger circuit boards, power units, and more metals compared to portable devices.",
     "materials": [
       { "name": "Copper", "percentage": 30.10, "recyclable": true, "description": "Wiring, coils, and PSU", "Value": true, "valuePerDevice": 0.112 },
-      { "name": "Silicon", "percentage": 17.60, "recyclable": true, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.136 },
+      { "name": "Silicon", "percentage": 17.60, "recyclable": false, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.136 },
       { "name": "Aluminum", "percentage": 13.60, "recyclable": true, "description": "Casing and structural parts", "Value": true, "valuePerDevice": 0.012 },
       { "name": "Steel", "percentage": 10.60, "recyclable": true, "description": "Frame and structure", "Value": false, "valuePerDevice": "NA" },
       { "name": "Gold", "percentage": 2.34, "recyclable": true, "description": "Connectors and CPUs", "Value": true, "valuePerDevice": 0.093 },
@@ -125,15 +125,15 @@
       { "name": "Lead", "percentage": 1.60, "recyclable": true, "description": "Solder", "Value": true, "valuePerDevice": 0.001 },
       { "name": "Nickel", "percentage": 5.00, "recyclable": true, "description": "Plating and batteries", "Value": true, "valuePerDevice": 0.024 },
       { "name": "Cobalt", "percentage": 1.96, "recyclable": true, "description": "Battery components", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Neodymium", "percentage": 1.20, "recyclable": true, "description": "Magnets", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Neodymium", "percentage": 1.20, "recyclable": false, "description": "Magnets", "Value": false, "valuePerDevice": "NA" },
       { "name": "Tin", "percentage": 3.20, "recyclable": true, "description": "Solder", "Value": true, "valuePerDevice": 0.036 },
-      { "name": "Palladium", "percentage": 0.20, "recyclable": true, "description": "Electronic contacts", "Value": true, "valuePerDevice": 0.028 },
-      { "name": "Boron", "percentage": 0.30, "recyclable": true, "description": "Magnets", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Ceramic grease", "percentage": 0.16, "recyclable": true, "description": "Cooling component", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Plastic", "percentage": 1.90, "recyclable": true, "description": "Casing and insulation", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Gallium Arsenide", "percentage": 0.70, "recyclable": true, "description": "High-speed semiconductors", "Value": true, "valuePerDevice": 0.011 },
+      { "name": "Palladium", "percentage": 0.20, "recyclable": false, "description": "Electronic contacts", "Value": true, "valuePerDevice": 0.028 },
+      { "name": "Boron", "percentage": 0.30, "recyclable": false, "description": "Magnets", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Ceramic grease", "percentage": 0.16, "recyclable": false, "description": "Cooling component", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Plastic", "percentage": 1.90, "recyclable": false, "description": "Casing and insulation", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Gallium Arsenide", "percentage": 0.70, "recyclable": false, "description": "High-speed semiconductors", "Value": true, "valuePerDevice": 0.011 },
       { "name": "Silver", "percentage": 0.70, "recyclable": true, "description": "Solder and contacts", "Value": true, "valuePerDevice": 0.033 },
-      { "name": "Other", "percentage": 7.00, "recyclable": true, "description": "Miscellaneous components", "Value": false, "valuePerDevice": "NA" }
+      { "name": "Other", "percentage": 7.00, "recyclable": false, "description": "Miscellaneous components", "Value": false, "valuePerDevice": "NA" }
   ]},
  
  
@@ -145,18 +145,18 @@
     "description": "Monitors are made from glass, plastics, and valuable trace metals for circuitry and LEDs.",
     "materials": [
       { "name": "Glass", "percentage": 38.50, "recyclable": true, "description": "Display panel material", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Silicon", "percentage": 12.15, "recyclable": true, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.106 },
+      { "name": "Silicon", "percentage": 12.15, "recyclable": false, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.106 },
       { "name": "Copper", "percentage": 11.05, "recyclable": true, "description": "Wiring and components", "Value": true, "valuePerDevice": 0.038 },
       { "name": "Aluminum", "percentage": 9.45, "recyclable": true, "description": "Structural parts and casing", "Value": true, "valuePerDevice": 0.009 },
-      { "name": "Indium", "percentage": 2.25, "recyclable": true, "description": "Touchscreens and coatings", "Value": true, "valuePerDevice": 0.246 },
+      { "name": "Indium", "percentage": 2.25, "recyclable": false, "description": "Touchscreens and coatings", "Value": true, "valuePerDevice": 0.246 },
       { "name": "Tin", "percentage": 3.60, "recyclable": true, "description": "Solder", "Value": true, "valuePerDevice": 0.040 },
       { "name": "Silver", "percentage": 1.80, "recyclable": true, "description": "Contacts and traces", "Value": true, "valuePerDevice": 0.857 },
-      { "name": "Gallium", "percentage": 1.05, "recyclable": true, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.017 },
+      { "name": "Gallium", "percentage": 1.05, "recyclable": false, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.017 },
       { "name": "Iron", "percentage": 1.05, "recyclable": true, "description": "Structural parts", "Value": true, "valuePerDevice": 0.00003 },
-      { "name": "Plastic", "percentage": 10.80, "recyclable": true, "description": "Casing and insulation", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Plastic", "percentage": 10.80, "recyclable": false, "description": "Casing and insulation", "Value": false, "valuePerDevice": "NA" },
       { "name": "Gold", "percentage": 0.90, "recyclable": true, "description": "Connectors and microelectronics", "Value": true, "valuePerDevice": 35.77 },
-      { "name": "Tantalum", "percentage": 1.35, "recyclable": true, "description": "Capacitors", "Value": true, "valuePerDevice": 0.111 },
-      { "name": "Other", "percentage": 6.05, "recyclable": true, "description": "Miscellaneous components", "Value": false, "valuePerDevice": "NA" }
+      { "name": "Tantalum", "percentage": 1.35, "recyclable": false, "description": "Capacitors", "Value": true, "valuePerDevice": 0.111 },
+      { "name": "Other", "percentage": 6.05, "recyclable": false, "description": "Miscellaneous components", "Value": false, "valuePerDevice": "NA" }
   ]},
  
  
@@ -168,22 +168,21 @@
     "description": "Smartwatches use small quantities of precious and rare metals in compact circuit boards.",
     "materials": [
       { "name": "Glass", "percentage": 33.00, "recyclable": true, "description": "Display panel material", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Silicon", "percentage": 15.30, "recyclable": true, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.133 },
+      { "name": "Silicon", "percentage": 15.30, "recyclable": false, "description": "Semiconductors", "Value": true, "valuePerDevice": 0.133 },
       { "name": "Aluminum", "percentage": 11.35, "recyclable": true, "description": "Casing and structural body", "Value": true, "valuePerDevice": 0.010 },
       { "name": "Copper", "percentage": 8.90, "recyclable": true, "description": "Internal wiring", "Value": true, "valuePerDevice": 0.031 },
       { "name": "Cobalt", "percentage": 3.65, "recyclable": true, "description": "Battery components", "Value": false, "valuePerDevice": "NA" },
       { "name": "Nickel", "percentage": 6.85, "recyclable": true, "description": "Plating and batteries", "Value": true, "valuePerDevice": 0.032 },
-      { "name": "Graphite", "percentage": 4.50, "recyclable": true, "description": "Battery anodes", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Lithium", "percentage": 1.20, "recyclable": true, "description": "Battery", "Value": true, "valuePerDevice": 0.004 },
+      { "name": "Graphite", "percentage": 4.50, "recyclable": false, "description": "Battery anodes", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Lithium", "percentage": 1.20, "recyclable": false, "description": "Battery", "Value": true, "valuePerDevice": 0.004 },
       { "name": "Magnesium", "percentage": 2.50, "recyclable": true, "description": "Casing alloys", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Manganese", "percentage": 2.00, "recyclable": true, "description": "Battery cathodes", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Neodymium", "percentage": 1.50, "recyclable": true, "description": "Magnets", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Manganese", "percentage": 2.00, "recyclable": false, "description": "Battery cathodes", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Neodymium", "percentage": 1.50, "recyclable": false, "description": "Magnets", "Value": false, "valuePerDevice": "NA" },
       { "name": "Gold", "percentage": 0.75, "recyclable": true, "description": "Circuit connectors and sensors", "Value": true, "valuePerDevice": 29.81 },
-      { "name": "Gallium Arsenide", "percentage": 0.70, "recyclable": true, "description": "High-speed semiconductors", "Value": true, "valuePerDevice": 0.011 },
-      { "name": "Boron", "percentage": 0.50, "recyclable": true, "description": "Magnets", "Value": false, "valuePerDevice": "NA" },
-      { "name": "Palladium", "percentage": 0.20, "recyclable": true, "description": "Electronic contacts", "Value": true, "valuePerDevice": 2.830 },
-      { "name": "Other", "percentage": 7.10, "recyclable": true, "description": "Miscellaneous components", "Value": false, "valuePerDevice": "NA" }
+      { "name": "Gallium Arsenide", "percentage": 0.70, "recyclable": false, "description": "High-speed semiconductors", "Value": true, "valuePerDevice": 0.011 },
+      { "name": "Boron", "percentage": 0.50, "recyclable": false, "description": "Magnets", "Value": false, "valuePerDevice": "NA" },
+      { "name": "Palladium", "percentage": 0.20, "recyclable": false, "description": "Electronic contacts", "Value": true, "valuePerDevice": 2.830 },
+      { "name": "Other", "percentage": 7.10, "recyclable": false, "description": "Miscellaneous components", "Value": false, "valuePerDevice": "NA" }
     ]
   }
  ]
- 
