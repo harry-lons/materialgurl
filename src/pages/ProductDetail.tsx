@@ -35,7 +35,7 @@ export function ProductDetail() {
   const sortedMaterials = [...product.materials].sort((a, b) => b.percentage - a.percentage)
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Back Button */}
       <Link to="/">
         <Button variant="ghost" className="mb-6">

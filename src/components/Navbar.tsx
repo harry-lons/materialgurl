@@ -68,7 +68,7 @@ export function Navbar() {
 
   return (
     <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-      <div className="container flex h-16 items-center px-4">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center">
         <div className="mr-4 flex">
           <span className="font-bold text-xl">MaterialGurl</span>
         </div>
@@ -89,6 +89,14 @@ export function Navbar() {
                 size="sm"
               >
                 About
+              </Button>
+            </Link>
+            <Link to="/facility-finder">
+              <Button 
+                variant={isActive('/facility-finder') ? "default" : "ghost"} 
+                size="sm"
+              >
+                Facility Finder
               </Button>
             </Link>
           </nav>
